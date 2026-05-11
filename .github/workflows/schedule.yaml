@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu:latest
   steps: 
     - name: print my name
-      run: echo "hello Muhamed"
+      run: echo "hello Muhamed talal"
 
 
