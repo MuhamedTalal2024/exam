@@ -1,12 +1,15 @@
-function greet(name) {
-    return `Hello, ${name}!`; // Use backticks for variable interpolation
-}
+#!/bin/bash
 
-module.exports = greet; // Ensure function is exportable
+# src/test.sh
 
-// If run directly, print output (useful for debugging)
-if (require.main === module) {
-    console.log(greet("World"));
-}
+EXPECTED="Hello, Test!"
 
+OUTPUT=$(node -e "console.log(require('./src/app')('Test'))")
 
+if [ "$OUTPUT" == "$EXPECTED" ]; then
+    echo "✅ Test passed!"
+    exit 0
+else
+    echo "❌ Test failed! Expected '$EXPECTED' but got '$OUTPUT'"
+    exit 1
+fi
