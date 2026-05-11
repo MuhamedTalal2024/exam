@@ -1,4 +1,4 @@
-name: schedule workflow
+name: scheduled trigger workflow
 
 on:
   schedule:
@@ -9,5 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: print my name
-        run: echo "hello Muhamed talal"
+      - name: echo message
+        run: |
+          echo "Hello Muhamed"
+          echo "Hello Talal"
