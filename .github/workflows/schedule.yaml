@@ -1,15 +1,13 @@
 name: schedule workflow
 
-on: 
-  schedule: 
+on:
+  schedule:
     - cron: "* * * * *"
 
-
-jobs: 
+jobs:
   schedule_job:
-    runs-on: ubuntu:latest
-    steps: 
+    runs-on: ubuntu-latest
+
+    steps:
       - name: print my name
         run: echo "hello Muhamed talal"
-
-
