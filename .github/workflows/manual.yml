@@ -3,7 +3,7 @@ on: workflow_dispatch:
 
 jobs: 
   deploy:
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
     steps: 
       - name: deploy the app to prod
         run: echo "deploying to prod..."
