@@ -11,4 +11,4 @@ jobs:
 
       - name: Cleanup on failure
         run: echo "Deployment succeeded"
-        if: success()		# This step only run if the previous step succedded
+        if: failure()	
