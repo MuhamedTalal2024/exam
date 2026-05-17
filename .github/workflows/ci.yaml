@@ -1,0 +1,24 @@
+name: Multiple Custom Actions
+
+on:
+  workflow_dispatch: 
+  
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run hello action
+        uses: ./hello-action
+
+      - name: Deploy Action
+        uses: ./deploy-action
+
+      - name: Run deploy action
+        uses: ./deploy-action
+
+      - name: Run cleanup action
+        uses: ./cleanup-action
