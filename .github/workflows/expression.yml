@@ -2,13 +2,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  expressions:
+  example:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run a deployment script
-        run: ./deploy.sh
+      - run: |
+          deprecated=true
 
-      - name: Cleanup on failure
-        run: echo "Deployment succeeded"
-        if: failure()
+          if [[ $deprecated ]]; then
+            echo "::warning::Deprecated function found"
+          fi
