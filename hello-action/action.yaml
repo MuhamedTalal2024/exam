@@ -6,7 +6,7 @@ inputs:
   username:
     description: "Name of the user"
     required: true
-    default: "Guest"
+    default: "Talal"
 
 outputs:
   message:
