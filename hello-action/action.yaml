@@ -1,0 +1,23 @@
+name: "Hello Action"
+
+description: "Simple custom GitHub Action example"
+
+inputs:
+  username:
+    description: "Name of the user"
+    required: true
+    default: "Guest"
+
+outputs:
+  message:
+    description: "Greeting message"
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: Generate greeting
+      shell: bash
+      run: |
+        echo "Hello ${{ inputs.username }}"
+        echo "message=Hello ${{ inputs.username }}" >> $GITHUB_OUTPUT
