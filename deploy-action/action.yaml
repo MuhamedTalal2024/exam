@@ -1,0 +1,12 @@
+name: Deploy Action
+
+inputs:
+  environment:
+    required: true
+
+runs:
+  using: composite
+
+  steps:
+    - shell: bash
+      run: echo "Deploying to ${{ inputs.environment }}"
