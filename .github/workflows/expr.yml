@@ -6,9 +6,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run a deployment script
-        run: ./deploy.sh
+      - name: Print a message
+        run: echo "The job is running"
 
-      - name: Cleanup on failure
-        run: echo "Deployment succeeded"
-        if: failure()	
+        if: ${{ github.event_name == 'push' }}
