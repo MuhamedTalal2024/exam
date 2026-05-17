@@ -16,9 +16,3 @@ jobs:
 
       - name: Deploy Action
         uses: ./deploy-action
-
-      - name: Run deploy action
-        uses: ./deploy-action
-
-      - name: Run cleanup action
-        uses: ./cleanup-action
