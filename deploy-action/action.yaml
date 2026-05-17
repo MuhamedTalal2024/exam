@@ -3,6 +3,7 @@ name: Deploy Action
 inputs:
   environment:
     required: true
+    default: production
 
 runs:
   using: composite
