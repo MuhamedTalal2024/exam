@@ -1,15 +1,12 @@
-name: Run Number Demo
+name: Branch Demo
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
-  demo:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Using Context
-        run: echo "${{ github.run_number }}"
-
-      - name: Using Environment Variable
-        run: echo "$GITHUB_RUN_NUMBER"
+      - run: echo "${{ github.ref }}"
+      - run: echo "${{ github.ref_name }}"
